@@ -84,5 +84,8 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision "shell", inline: <<-SHELL
     snap install groovy --classic
+    apt install -y default-jdk
+    java_path="$(sudo update-alternatives --display java | grep 'best version' | cut -d ' ' -f 7-)"
+    printf 'JAVA_HOME="%s"\n' "${java_path}" >> /etc/environment
   SHELL
 end
