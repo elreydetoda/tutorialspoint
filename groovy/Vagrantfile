@@ -82,4 +82,7 @@ Vagrant.configure("2") do |config|
       ansible_python_interpreter: "/usr/bin/env python3"
     }
   end
+  config.vm.provision "shell", inline: <<-SHELL
+    snap install groovy --classic
+  SHELL
 end
