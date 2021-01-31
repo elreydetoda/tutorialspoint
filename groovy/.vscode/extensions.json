@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+      "nicolasvuillamy.vscode-groovy-lint",
+      "marlon407.code-groovy",
+      "formulahendry.code-runner"
+    ]
+}
